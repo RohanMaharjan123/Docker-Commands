@@ -2,7 +2,7 @@
 
 ## General commands
 
-| Branch Name        | Description                                                                                   |
+| Cli Commands        | Description                                                                                   |
 | :----------------- | :-------------------------------------------------------------------------------------------- |
 | docker ps        | List running containers                                           |
 | docker ps -a        | List all containers                                            |
