@@ -39,6 +39,20 @@
 | `docker kill my-nginx`            | Sending a SIGKILL to a container       |
 | `docker attach my-nginx`          | Connecting to an existing container    |
 
+## Container Information
+
+| CLI Commands                     | Description                                     |
+| :------------------------------- | :---------------------------------------------- |
+| `docker ps`                       | List running containers                         |
+| `docker ps -a`                    | List all containers                             |
+| `docker logs my-nginx`            | Container logs                                  |
+| `docker inspect my-nginx`         | Inspecting containers                           |
+| `docker events my-nginx`          | Container events                                |
+| `docker port my-nginx`            | Public ports                                    |
+| `docker top my-nginx`             | Running processes                               |
+| `docker stats my-nginx`           | Container resource usage                        |
+| `docker diff my-nginx`            | Lists the changes made to a container           |
+
 ## Guidelines
 
 ## Notes
