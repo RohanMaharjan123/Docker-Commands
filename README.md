@@ -53,6 +53,39 @@
 | `docker stats my-nginx`           | Container resource usage                        |
 | `docker diff my-nginx`            | Lists the changes made to a container           |
 
+## Creating Docker Image
+
+| Option                             | Description                                 |
+| :--------------------------------- | :------------------------------------------ |
+| `-a, --attach`                     | Attach stdout/err                           |
+| `-i, --interactive`                | Attach stdin (interactive)                  |
+| `-t, --tty`                        | Pseudo-TTY                                  |
+| `--name NAME`                      | Name your container                         |
+| `-p, --publish 5000:5000`          | Port map (host:container)                   |
+| `--expose 5432`                    | Expose a port to containers                 |
+| `-P, --publish-all`                | Publish all ports                           |
+| `--link container:alias`           | Linking containers                          |
+| `-v, --volume \`pwd\`:/app`        | Mount (absolute paths needed)               |
+| `-e, --env NAME=hello`             | Environment variables                       |
+
+## Docker Container Creation
+
+```bash
+docker create [options] IMAGE
+```
+
+## Docker Create Command
+
+| Command                                          | Description                                                                                                                                                        |
+| :----------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `docker create --name my_sql --expose 3306 mysql:latest` | Create a new Docker container named `my_sql` from the latest MySQL image. The command also exposes port `3306` for internal communication with other Docker containers in the same network. The container is not started immediately, allowing for further configuration if needed. |
+
+### Example
+
+```bash
+docker create --name my_sql --expose 3306 mysql:latest
+```
+
 ## Guidelines
 
 ## Notes
