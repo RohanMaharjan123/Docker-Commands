@@ -86,6 +86,14 @@ docker create [options] IMAGE
 docker create --name my_sql --expose 3306 mysql:latest
 ```
 
+## Managing Containers
+
+| Command                                                 | Description                                                                                       |
+| :------------------------------------------------------ | :------------------------------------------------------------------------------------------------ |
+| `docker rename my-nginx my-new-nginx`                   | Rename a container from `my-nginx` to `my-new-nginx`.                                              |
+| `docker rm my-nginx`                                    | Remove a container named `my-nginx`.                                                               |
+| `docker update --cpu-shares 512 -m 300M my-nginx`       | Update the resource limits of the `my-nginx` container. This sets CPU shares to `512` and memory limit to `300MB`. |
+
 ## Guidelines
 
 ## Notes
