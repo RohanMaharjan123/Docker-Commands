@@ -94,6 +94,22 @@ docker create --name my_sql --expose 3306 mysql:latest
 | `docker rm my-nginx`                                    | Remove a container named `my-nginx`.                                                               |
 | `docker update --cpu-shares 512 -m 300M my-nginx`       | Update the resource limits of the `my-nginx` container. This sets CPU shares to `512` and memory limit to `300MB`. |
 
+## Docker Images
+
+### Manipulating Images
+
+| Command                                        | Description                                                             |
+| :--------------------------------------------- | :---------------------------------------------------------------------- |
+| `docker images`                                | List all Docker images available on the system.                         |
+| `docker rmi nginx`                             | Remove an image named `nginx` from the system.                          |
+| `docker load < ubuntu.tar.gz`                  | Load a tarred repository from a file named `ubuntu.tar.gz`.             |
+| `docker load --input ubuntu.tar`               | Load a tarred repository using the `--input` option.                    |
+| `docker save busybox > ubuntu.tar`             | Save an image named `busybox` to a tar archive named `ubuntu.tar`.      |
+| `docker history nginx`                         | Show the history of the `nginx` image.                                  |
+| `docker commit nginx my_nginx_image`           | Save a running container named `nginx` as a new image called `my_nginx_image`. |
+| `docker tag nginx eon01/nginx`                 | Tag the `nginx` image with the name `eon01/nginx`.                      |
+| `docker push eon01/nginx`                      | Push the `eon01/nginx` image to a remote repository (e.g., Docker Hub). |
+
 ## Guidelines
 
 ## Notes
