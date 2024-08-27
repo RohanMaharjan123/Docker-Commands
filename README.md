@@ -110,6 +110,20 @@ docker create --name my_sql --expose 3306 mysql:latest
 | `docker tag nginx eon01/nginx`                 | Tag the `nginx` image with the name `eon01/nginx`.                      |
 | `docker push eon01/nginx`                      | Push the `eon01/nginx` image to a remote repository (e.g., Docker Hub). |
 
+## Building Images
+
+## Docker Build
+
+| Command                                                     | Description                                                                                                    |
+| :---------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------- |
+| `$ docker build .`                                           | Build a Docker image from the Dockerfile in the current directory.                                              |
+| `$ docker build github.com/creack/docker-firefox`            | Build a Docker image directly from a GitHub repository.                                                         |
+| `$ docker build - < Dockerfile`                              | Build a Docker image using a Dockerfile passed through standard input.                                          |
+| `$ docker build - < context.tar.gz`                          | Build a Docker image from a compressed context (e.g., a `.tar.gz` file).                                        |
+| `$ docker build -t eon/my-nginx .`                           | Build a Docker image and tag it as `eon/my-nginx`.                                                              |
+| `$ docker build -f myOtherDockerfile .`                      | Build a Docker image using a specific Dockerfile named `myOtherDockerfile`.                                     |
+| `$ curl example.com/remote/Dockerfile | docker build -f - .` | Download a remote Dockerfile using `curl` and build a Docker image from it using the standard input (`-`).      |
+
 ## Guidelines
 
 ## Notes
