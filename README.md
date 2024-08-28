@@ -124,6 +124,18 @@ docker create --name my_sql --expose 3306 mysql:latest
 | `$ docker build -f myOtherDockerfile .`                      | Build a Docker image using a specific Dockerfile named `myOtherDockerfile`.                                     |
 | `$ curl example.com/remote/Dockerfile | docker build -f - .` | Download a remote Dockerfile using `curl` and build a Docker image from it using the standard input (`-`).      |
 
+## Docker Networking
+
+### Manipulating Networks
+
+| Command                                                        | Description                                                                                  |
+| :------------------------------------------------------------- | :------------------------------------------------------------------------------------------- |
+| `docker network rm MyOverlayNetwork`                           | Remove a network named `MyOverlayNetwork`.                                                   |
+| `docker network ls`                                            | List all Docker networks available on the system.                                            |
+| `docker network inspect MyOverlayNetwork`                      | Get detailed information about a specific network named `MyOverlayNetwork`.                  |
+| `docker network connect MyOverlayNetwork nginx`                | Connect a running container named `nginx` to the `MyOverlayNetwork`.                         |
+| `docker run -it -d --network=MyOverlayNetwork nginx`           | Start a new container named `nginx` and connect it to the `MyOverlayNetwork` at startup.     |
+
 ## Guidelines
 
 ## Notes
