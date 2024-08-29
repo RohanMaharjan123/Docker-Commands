@@ -136,6 +136,15 @@ docker create --name my_sql --expose 3306 mysql:latest
 | `docker network connect MyOverlayNetwork nginx`                | Connect a running container named `nginx` to the `MyOverlayNetwork`.                         |
 | `docker run -it -d --network=MyOverlayNetwork nginx`           | Start a new container named `nginx` and connect it to the `MyOverlayNetwork` at startup.     |
 
+
+## Creating Networks
+
+| Command                                                                                               | Description                                                                                                                   |
+| :---------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------- |
+| `docker network create -d overlay MyOverlayNetwork`                                                   | Create a new network named `MyOverlayNetwork` using the `overlay` driver.                                                     |
+| `docker network create -d bridge MyBridgeNetwork`                                                     | Create a new network named `MyBridgeNetwork` using the `bridge` driver.                                                       |
+| `docker network create -d overlay \`<br>  `--subnet=192.168.0.0/16`<br>  `--subnet=192.170.0.0/16`<br>  `--gateway=192.168.0.100`<br>  `--gateway=192.170.0.100`<br>  `--ip-range=192.168.1.0/24`<br>  `--aux-address="my-router=192.168.1.5"`<br>  `--aux-address="my-switch=192.168.1.6"`<br>  `--aux-address="my-printer=192.170.1.5"`<br>  `--aux-address="my-nas=192.170.1.6"`<br>  `MyOverlayNetwork` | Create a more complex overlay network named `MyOverlayNetwork` with specific subnets, gateways, IP ranges, and auxiliary addresses.  |
+
 ## Guidelines
 
 ## Notes
