@@ -168,6 +168,12 @@ docker create --name my_sql --expose 3306 mysql:latest
 | `docker image prune`                     | Remove all dangling images (not tagged and not associated with a container). |
 | `docker image prune -a`                  | Remove all images that are not used by any existing containers.              |
 
+## Volumes
+
+| Command                             | Description                                                          |
+| :---------------------------------- | :------------------------------------------------------------------- |
+| `docker volume prune`               | Remove all volumes that are not used by at least one container.       |
+
 ## Guidelines
 
 ## Notes
