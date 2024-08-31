@@ -112,7 +112,7 @@ docker create --name my_sql --expose 3306 mysql:latest
 
 ## Building Images
 
-## Docker Build
+### Docker Build
 
 | Command                                                     | Description                                                                                                    |
 | :---------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------- |
@@ -153,6 +153,13 @@ docker create --name my_sql --expose 3306 mysql:latest
 | :----------------------------------- | :----------------------------------------------------------------------------------------------------------------------- |
 | `docker system prune`                | Cleans up dangling images, containers, volumes, and networks that are not associated with any containers.                |
 | `docker system prune -a`             | Additionally removes any stopped containers and all unused images, not just dangling images.                             |
+
+## Containers
+
+| Command                                         | Description                                       |
+| :---------------------------------------------- | :------------------------------------------------ |
+| `docker stop $(docker ps -a -q)`                | Stop all running containers.                      |
+| `docker container prune`                        | Delete all stopped containers.                    |
 
 ## Guidelines
 
