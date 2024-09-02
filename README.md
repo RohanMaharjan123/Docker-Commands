@@ -174,6 +174,17 @@ docker create --name my_sql --expose 3306 mysql:latest
 | :---------------------------------- | :------------------------------------------------------------------- |
 | `docker volume prune`               | Remove all volumes that are not used by at least one container.       |
 
+## Miscellaneous
+
+### Docker Hub
+
+| Command                                | Description                                            |
+| :------------------------------------- | :----------------------------------------------------- |
+| `docker search search_word`            | Search Docker Hub for images using `search_word`.      |
+| `docker pull user/image`               | Download an image from Docker Hub.                     |
+| `docker login`                         | Authenticate to Docker Hub.                            |
+| `docker push user/image`               | Upload an image to Docker Hub.                         |
+
 ## Guidelines
 
 ## Notes
