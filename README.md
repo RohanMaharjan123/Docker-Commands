@@ -185,6 +185,14 @@ docker create --name my_sql --expose 3306 mysql:latest
 | `docker login`                         | Authenticate to Docker Hub.                            |
 | `docker push user/image`               | Upload an image to Docker Hub.                         |
 
+## Batch Clean
+
+| Command                                    | Description                             |
+| :----------------------------------------- | :-------------------------------------- |
+| `docker stop -f $(docker ps -a -q)`        | Stop all containers.                    |
+| `docker rm -f $(docker ps -a -q)`          | Remove all containers.                  |
+| `docker rmi -f $(docker images -q)`        | Remove all images.                      |
+
 ## Guidelines
 
 ## Notes
