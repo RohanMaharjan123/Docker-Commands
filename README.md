@@ -193,6 +193,13 @@ docker create --name my_sql --expose 3306 mysql:latest
 | `docker rm -f $(docker ps -a -q)`          | Remove all containers.                  |
 | `docker rmi -f $(docker images -q)`        | Remove all images.                      |
 
+## Volumes
+
+| Command                          | Description                                           |
+| :------------------------------- | :---------------------------------------------------- |
+| `docker volume ls`                | List all Docker volumes.                             |
+| `docker volume prune`             | Cleanup and remove all unused Docker volumes.        |
+
 ## Guidelines
 
 ## Notes
