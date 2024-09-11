@@ -200,6 +200,43 @@ docker create --name my_sql --expose 3306 mysql:latest
 | `docker volume ls`                | List all Docker volumes.                             |
 | `docker volume prune`             | Cleanup and remove all unused Docker volumes.        |
 
+## Registry Commands
+
+### Login to a Registry
+
+| Command                                | Description                                         |
+| :------------------------------------- | :-------------------------------------------------- |
+| `docker login`                         | Login to the default Docker registry (Docker Hub).  |
+| `docker login localhost:8080`          | Login to a local registry at `localhost:8080`.      |
+
+### Logout from a Registry
+
+| Command                                | Description                                         |
+| :------------------------------------- | :-------------------------------------------------- |
+| `docker logout`                        | Logout from the default Docker registry (Docker Hub).|
+| `docker logout localhost:8080`         | Logout from a local registry at `localhost:8080`.   |
+
+### Searching an Image
+
+| Command                                | Description                                         |
+| :------------------------------------- | :-------------------------------------------------- |
+| `docker search nginx`                  | Search for the `nginx` image on Docker Hub.         |
+| `docker search nginx --stars=3 --no-trunc busybox` | Search for images with at least 3 stars and show full descriptions, including `busybox`. |
+
+### Pulling an Image
+
+| Command                                | Description                                         |
+| :------------------------------------- | :-------------------------------------------------- |
+| `docker pull nginx`                    | Pull the `nginx` image from Docker Hub.             |
+| `docker pull eon01/nginx localhost:5000/myadmin/nginx` | Pull the `nginx` image from a custom registry at `localhost:5000`. |
+
+### Pushing an Image
+
+| Command                                | Description                                         |
+| :------------------------------------- | :-------------------------------------------------- |
+| `docker push eon01/nginx`              | Push the `nginx` image to Docker Hub.               |
+| `docker push eon01/nginx localhost:5000/myadmin/nginx` | Push the `ng​⬤
+
 ## Guidelines
 
 ## Notes
